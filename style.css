@@ -6,28 +6,42 @@
 
 :root{
     --primary-color: #ff4500;
+    --secondary-color: #FFF;
     --primary-font: "Poppins";
     --semi-bold-font: 600;
     --normal-bold-font: 500;
     --semi-light-font: 400;
+    --banner-size: 49rem;
 }
 
 body {
     font-family: var(--primary-font);
-    background-color: #fff;
+    background-color: var(--secondary-color);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 10rem 100rem 50rem 50rem 5rem;
+    gap: 3rem;
 }
 
 .container > div:nth-child(1) {
     display: flex;
     justify-content: space-between;
-    padding: 3rem 4rem;
+    align-items: center;
     position: relative;
 }
 
 .container > div:nth-child(1) > div:nth-child(1) {
+    width: 15rem;
+    block-size: 7.5rem;
+    margin-left: 5rem;
+}
+
+.container > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
     background-image: url('img/Logo.png');
     background-size: cover;
-    padding: 2.5rem 6rem;
+    block-size: 100%;
 }
 
 .container > div:nth-child(1) > div:nth-child(2) {
@@ -35,7 +49,7 @@ body {
 }
 
 .container > div:nth-child(1) > div:nth-child(2) > div {
-    padding: 2rem 4rem;
+    padding: 0 4rem;
     font-size: 1.3rem;
     font-weight: var(--normal-bold-font);
 }
@@ -53,14 +67,14 @@ body {
     background-image: url('img/baniere.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 24.5rem;
+    block-size: var(--banner-size);
 }
 
 .container > div:nth-child(2) > div:nth-child(2) {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
+    block-size: var(--banner-size);
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
 }
@@ -70,7 +84,7 @@ body {
     top: 6rem;
     left: 50%;
     transform: translateX(-50%);
-    color: #FFF;
+    color: var(--secondary-color);
     width: 80%;
     text-align: center;
     letter-spacing: 2px;
@@ -78,14 +92,14 @@ body {
 
 .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
     font-size: 2rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: var(--semi-bold-font);
 }
 
 .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
     font-size: 4.5rem;
     font-weight: 800;
-    padding: 2.5rem 0;
+    margin: 3rem 0;
 }
 
 .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) {
@@ -116,181 +130,170 @@ body {
     cursor: pointer;
 }
 
-.container > div:nth-child(3) {
+.container > div:nth-child(2) > div:nth-child(3) {
     position: relative;
-    top: -20rem;
-    left: 45%;
+    top: -10rem;
+    left: 48%;
     transform: translateX(-50%);
-    width: 45%;
-    margin-bottom: 4rem;
+    width: 36%;
+    block-size: 50rem;
 }
 
-.container > div:nth-child(3) > div {
+.container > div:nth-child(2) > div:nth-child(3) > div {
     background-image: url('img/2telephones.png');
     background-size: cover;
-    padding: 30rem;
-    padding-bottom: 50rem;
+    block-size: 100%;
 }
 
-.container > div:nth-child(4) {
+.container > div:nth-child(2) > div:nth-child(4) {
     width: 60%;
-    position: relative;
-    top: -25rem;
-    margin: 3rem auto;
+    margin: 0 auto;
     border: 0.15rem solid rgb(154, 152, 152);
     opacity: 0.2;
 }
 
-.container > div:nth-child(5) {
-    width: 80%;
+.container > div:nth-child(3) {
+    width: 84%;
     margin: 0 auto;
-    position: relative;
-    top: -26rem;
 }
 
-.container > div:nth-child(5) > div:nth-child(1) {
+.container > div:nth-child(3) > div:nth-child(1) {
     text-align: center;
     font-size: 3.5rem;
     font-weight: var(--semi-bold-font);
 }
 
-.container > div:nth-child(5) > div:nth-child(2) {
+.container > div:nth-child(3) > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    block-size: 60rem;
 }
 
-.container > div:nth-child(5) > :nth-child(2) > :nth-child(1) {
-    width: 50%;
-    position: relative;
+.container > div:nth-child(3) > :nth-child(2) > :nth-child(1) {
+    width: 100%;
+    block-size: 100%;
 }
 
-.container > div:nth-child(5) > :nth-child(2) > :nth-child(1) > div {
+.container > div:nth-child(3) > :nth-child(2) > :nth-child(1) > div {
     background-image: url('img/RectangleImg2.png');
     background-size: cover;
-    padding: 26rem 20rem;
+    block-size: 100%;
 }
 
-.container > div:nth-child(5) > :nth-child(2) > :nth-child(2) {
-    width: 50%;
+.container > div:nth-child(3) > :nth-child(2) > :nth-child(2) {
+    width: 100%;
     font-weight: var(--normal-bold-font);
     position: relative;
-    top: 24rem;
 }
 
-.container > div:nth-child(5) > :nth-child(2) > :nth-child(2) > :nth-child(1) {
+.container > div:nth-child(3) > :nth-child(2) > :nth-child(2) > :nth-child(1) {
     color: var(--primary-color);
     font-size: 1.8rem;
     font-weight: var(--semi-bold-font);
     margin-bottom: 2rem;
 }
 
-.container > div:nth-child(5) > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+.container > div:nth-child(3) > :nth-child(2) > :nth-child(2) > :nth-child(2) {
     font-size: 3.2rem;
     font-weight: var(--semi-bold-font);
     line-height: 1.4;
     margin-bottom: 2rem;
 }
 
-.container > div:nth-child(5) > :nth-child(2) > :nth-child(2) > :nth-child(3) {
+.container > div:nth-child(3) > :nth-child(2) > :nth-child(2) > :nth-child(3) {
     font-size: 2.2rem;
     opacity: 0.6;
     font-weight: var(--semi-light-font);
 }
 
-.container > div:nth-child(6) {
+.container > div:nth-child(4) {
     width: 80%;
-    margin: 0 auto;
-    position: relative;
-    top: -26rem;
-}
-
-.container > div:nth-child(6) > div:nth-child(1) {
+    margin: 5rem auto;
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    align-items: center;
+    block-size: 60rem;
+}
+
+.container > div:nth-child(4) > div:nth-child(1) {
     width: 100%;
-}
-
-.container > div:nth-child(6) > :nth-child(1) > :nth-child(1) {
-    width: 50%;
-    position: relative;
-}
-
-.container > div:nth-child(6) > :nth-child(1) > :nth-child(1) > div {
-    background-image: url('img/RectangleImg3.png');
-    background-size: cover;
-    padding: 28rem 20rem;
-}
-
-.container > div:nth-child(6) > :nth-child(1) > :nth-child(2) {
-    width: 50%;
     font-weight: var(--normal-bold-font);
-    position: relative;
-    top: 20rem;
 }
 
-.container > div:nth-child(6) > :nth-child(1) > :nth-child(2) > :nth-child(1) {
+.container > div:nth-child(4) > :nth-child(1) > :nth-child(1) {
     color: var(--primary-color);
     font-size: 2rem;
     font-weight: var(--semi-bold-font);
     margin-bottom: 2rem;
 }
 
-.container > div:nth-child(6) > :nth-child(1) > :nth-child(2) > :nth-child(2) {
+.container > div:nth-child(4) > :nth-child(1) > :nth-child(2) {
     font-size: 3.4rem;
     font-weight: var(--semi-bold-font);
     line-height: 1.4;
     margin-bottom: 2rem;
 }
 
-.container > div:nth-child(6) > :nth-child(1) > :nth-child(2) > :nth-child(3) {
+.container > div:nth-child(4) > :nth-child(1) > :nth-child(3) {
     font-size: 2.4rem;
     opacity: 0.6;
     font-weight: var(--semi-light-font);
 }
 
-.container > div:nth-child(7) {
+.container > div:nth-child(4) > :nth-child(2) {
+    width: 100%;
+    block-size: 100%;
+}
+
+.container > div:nth-child(4) > :nth-child(2) > div {
+    background-image: url('img/RectangleImg3.png');
+    background-size: cover;
+    block-size: 100%;
+}
+
+.container > div:nth-child(5) {
     width: 80%;
     margin: 0 auto;
-    margin-top: -15rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 3rem;
+    block-size: 20rem;
 }
 
-.container > div:nth-child(7) > :nth-child(1) {
+.container > div:nth-child(5) > :nth-child(1) {
     padding: 3rem 6rem;
     background-image: url('img/Logo.png');
     background-size: cover;
 }
 
-.container > div:nth-child(7) > :nth-child(2) {
+.container > div:nth-child(5) > :nth-child(2) {
     display: flex;
     justify-content: space-evenly;
 }
 
-.container > div:nth-child(7) > :nth-child(2) > :nth-child(1) {
+.container > div:nth-child(5) > :nth-child(2) > :nth-child(1) {
     background-image: url('img/twitter.png');
     padding: 1.5rem 1.8rem;
     background-size: cover;
     margin-right: 2rem;
 }
 
-.container > div:nth-child(7) > :nth-child(2) > :nth-child(2) {
+.container > div:nth-child(5) > :nth-child(2) > :nth-child(2) {
     background-image: url('img/facebook.png');
     padding: 1.5rem;
     background-size: cover;
     margin-right: 2rem;
 }
 
-.container > div:nth-child(7) > :nth-child(2) > :nth-child(3) {
+.container > div:nth-child(5) > :nth-child(2) > :nth-child(3) {
     background-image: url('img/insta.png');
     padding: 1.5rem;
     background-size: cover;
 }
 
-.container > div:nth-child(7) > :nth-child(3) {
+.container > div:nth-child(5) > :nth-child(3) {
     font-weight: var(--semi-bold-font);
 }
