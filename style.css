@@ -7,11 +7,20 @@
 :root{
     --primary-color: #ff4500;
     --secondary-color: #FFF;
+    --black-transparent: rgba(0, 0, 0, 0.5);
+    --white-transparent: rgba(255, 255, 255, 0.1);
     --primary-font: "Poppins";
     --semi-bold-font: 600;
     --normal-bold-font: 500;
     --semi-light-font: 400;
     --banner-size: 49rem;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:url('font/Poppins-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -21,7 +30,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 10rem 100rem 50rem 50rem 5rem;
+    grid-template-rows: 5% 40% repeat(2, 22%) 3%;
     gap: 3rem;
 }
 
@@ -30,6 +39,26 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+}
+
+.container > div:nth-child(1) > div:nth-child(3) {
+    display: none;
+    margin-right: 4rem;
+    cursor: pointer;
+}
+
+.container > div:nth-child(1) > div:nth-child(3) > div {
+    border: 0.25rem solid var(--black-transparent);
+    width: 3rem;
+    border-radius: 3rem;
+}
+
+.container > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) {
+    margin-bottom: 0.5rem;
+}
+
+.container > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) {
+    margin-bottom: 0.5rem;
 }
 
 .container > div:nth-child(1) > div:nth-child(1) {
@@ -71,7 +100,7 @@ body {
 }
 
 .container > div:nth-child(2) > div:nth-child(2) {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--black-transparent);
     position: absolute;
     block-size: var(--banner-size);
     top: 0;
@@ -115,34 +144,34 @@ body {
     font-weight: var(--semi-bold-font);
 }
 
-.container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) {
+.container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div {
     padding: 1.5rem 4rem;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) {
     background-color: var(--primary-color);
     margin-right: 2.5rem;
-    border-radius: 3rem;
-    cursor: pointer;
 }
 
 .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) {
-    padding: 1.5rem 3.5rem;
     border: 1px solid #FFF;
     border-radius: 3rem;
-    cursor: pointer;
 }
 
 .container > div:nth-child(2) > div:nth-child(3) {
     position: relative;
-    top: -10rem;
+    top: -3%;
     left: 48%;
     transform: translateX(-50%);
     width: 36%;
-    block-size: 50rem;
 }
 
 .container > div:nth-child(2) > div:nth-child(3) > div {
     background-image: url('img/2telephones.png');
     background-size: cover;
-    block-size: 100%;
+    padding: 57% 22%;
 }
 
 .container > div:nth-child(2) > div:nth-child(4) {
@@ -153,7 +182,7 @@ body {
 }
 
 .container > div:nth-child(3) {
-    width: 84%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -168,18 +197,17 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    block-size: 60rem;
 }
 
 .container > div:nth-child(3) > :nth-child(2) > :nth-child(1) {
     width: 100%;
-    block-size: 100%;
 }
 
 .container > div:nth-child(3) > :nth-child(2) > :nth-child(1) > div {
     background-image: url('img/RectangleImg2.png');
     background-size: cover;
-    block-size: 100%;
+    background-position: center center;
+    padding: 70% 35%;
 }
 
 .container > div:nth-child(3) > :nth-child(2) > :nth-child(2) {
@@ -210,11 +238,10 @@ body {
 
 .container > div:nth-child(4) {
     width: 80%;
-    margin: 5rem auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    block-size: 60rem;
 }
 
 .container > div:nth-child(4) > div:nth-child(1) {
@@ -244,29 +271,28 @@ body {
 
 .container > div:nth-child(4) > :nth-child(2) {
     width: 100%;
-    block-size: 100%;
 }
 
 .container > div:nth-child(4) > :nth-child(2) > div {
     background-image: url('img/RectangleImg3.png');
     background-size: cover;
-    block-size: 100%;
+    padding: 70% 35%;
 }
 
 .container > div:nth-child(5) {
     width: 80%;
-    margin: 0 auto;
-    margin-top: 10rem;
+    margin: 10% auto 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    block-size: 20rem;
+    position: relative;
 }
 
 .container > div:nth-child(5) > :nth-child(1) {
-    padding: 3rem 6rem;
     background-image: url('img/Logo.png');
     background-size: cover;
+    block-size: 7.5rem;
+    width: 15rem;
 }
 
 .container > div:nth-child(5) > :nth-child(2) {
@@ -276,24 +302,297 @@ body {
 
 .container > div:nth-child(5) > :nth-child(2) > :nth-child(1) {
     background-image: url('img/twitter.png');
-    padding: 1.5rem 1.8rem;
+    block-size: 3rem;
+    width: 3.5rem;
     background-size: cover;
     margin-right: 2rem;
 }
 
+.container > div:nth-child(5) > :nth-child(2) > :nth-child(2), 
+.container > div:nth-child(5) > :nth-child(2) > :nth-child(3) {
+    block-size: 3rem;
+    width: 3rem;
+    background-size: cover;
+}
+
 .container > div:nth-child(5) > :nth-child(2) > :nth-child(2) {
     background-image: url('img/facebook.png');
-    padding: 1.5rem;
-    background-size: cover;
     margin-right: 2rem;
 }
 
 .container > div:nth-child(5) > :nth-child(2) > :nth-child(3) {
     background-image: url('img/insta.png');
-    padding: 1.5rem;
-    background-size: cover;
 }
 
 .container > div:nth-child(5) > :nth-child(3) {
     font-weight: var(--semi-bold-font);
+}
+
+.container > div:nth-child(5) > :nth-child(4) {
+    display: none;
+    font-size: 1.5rem;
+    color: rgb(128, 128, 128);
+    font-weight: var(--semi-bold-font);
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1600px) {
+    .container > div:nth-child(2) > div:nth-child(3)
+    {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    /* ------------------- Partie 1 ------------------- */
+
+    .container > :nth-child(2) {
+        background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    .container > div:nth-child(1) > div:nth-child(2) {
+        display: none;
+    }
+
+    .container > div:nth-child(1) > div:nth-child(3) {
+        display: block;
+    }
+
+    /* ------------------- Partie 2 ------------------- */
+
+    .container > div:nth-child(2) > div:nth-child(1) {
+        background-image: none;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) {
+        background-color: transparent;
+    }
+    
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+        color: black;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1),
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) {
+        color: rgba(128, 128, 128);
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+        font-size: 3.5rem;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) {
+        color: var(--secondary-color);
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) {
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+
+
+    }
+
+    .container > div:nth-child(2) > div:nth-child(3)
+    {
+        width: 50%;
+        top: -2rem;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(4) {
+        display: none;
+    }
+
+    /* ------------------- Partie 3 ------------------- */
+
+    .container > div:nth-child(3) > div:nth-child(1) {
+        font-size: 2.5rem;
+    }
+
+    .container > div:nth-child(3) > :nth-child(2) > :nth-child(1) > div {
+        block-size: 45rem;
+    }
+
+    .container > div:nth-child(3) > :nth-child(2) > :nth-child(2) > :nth-child(1) {
+        font-size: 1.5rem;
+    }
+
+    .container > div:nth-child(3) > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+        font-size: 2.5rem;
+    }
+
+    .container > div:nth-child(3) > :nth-child(2) > :nth-child(2) > :nth-child(3) {
+        font-size: 1.8rem;
+    }
+
+    /* ------------------- Partie 4 ------------------- */
+
+    .container > div:nth-child(4) > :nth-child(1) > :nth-child(1) {
+        font-size: 1.5rem;
+    }    
+
+    .container > div:nth-child(4) > :nth-child(1) > :nth-child(2) {
+        font-size: 2.5rem;
+    }  
+
+    .container > div:nth-child(4) > :nth-child(1) > :nth-child(3) {
+        font-size: 1.8rem;
+    }  
+
+    .container > div:nth-child(4) > :nth-child(2) > div {
+        padding: 75% 25%;
+        position: relative;
+        top: -3rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .container {
+        grid-template-rows: 5% 40% repeat(2, 30%) 3%;
+    }
+
+    /* --------------------- Partie 1 --------------------- */
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) {
+        flex-direction: column;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > :nth-child(1) {
+        margin-bottom: 2rem;
+        width: 20rem;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > :nth-child(2) {
+        width: 20rem;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(3) {
+        position: relative;
+        margin-top: 10rem;
+    }
+
+    /* --------------------- Partie 3 --------------------- */
+    
+    .container > div:nth-child(3) {
+        width: 100%;
+    }
+
+    .container > div:nth-child(3) > div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .container > div:nth-child(3) > div:nth-child(2)  > :nth-child(1) {
+        width: 90%;
+        block-size: 60rem;
+        margin-top: -5rem;
+    }
+
+    .container > div:nth-child(3) > div:nth-child(2)  > :nth-child(1) > div {
+        width: 100%;
+        block-size: 100%;
+    }
+
+    .container > div:nth-child(3) > :nth-child(2) > :nth-child(2) {
+        width: 100%;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    /* --------------------- Partie 4 --------------------- */
+
+    .container > div:nth-child(4) {
+        width: 65%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* --------------------- Partie 5 --------------------- */
+
+    .container > div:nth-child(5) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -15%;
+    }
+
+    .container > div:nth-child(5) > :nth-child(1) {
+        background-image: none;
+    }
+
+    .container > div:nth-child(5) > :nth-child(2) {
+       margin-bottom: 2rem;
+    }
+
+    .container > div:nth-child(5) > :nth-child(3) {
+        display: none;
+    }
+
+    .container > div:nth-child(5) > :nth-child(4) {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        grid-template-rows: 5% 40% repeat(2, 26%) 3%;
+    }
+    
+    .container > div:nth-child(2) > div:nth-child(3)
+    {
+        width: 90%;
+        margin-top: 20rem;
+    }
+
+    .container > div:nth-child(3) > div:nth-child(2) {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .container {
+        grid-template-rows: 5% 40% repeat(2, 35%) 3%;
+    }
+
+    .container > div:nth-child(3) {
+        width: 90%;
+    }
+    
+    .container > div:nth-child(3) > div:nth-child(2)  > :nth-child(1) {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container > div:nth-child(2) > div:nth-child(3)
+    {
+        width: 90%;
+        margin-top: 20rem;
+    }
+}
+
+@media screen and (max-width: 556px) {
+    
+    .container > div:nth-child(2) > div:nth-child(3)
+    {
+        margin-top: 30rem;
+    }
 }
